@@ -14,5 +14,5 @@ porta_principale.set_edge("closing",allarme)
 RL0 = ablib.Daisy8(connector='D11',id='RL0')
  
 while True: 
-	print "Ciao"
+	print "Ciao Paolo"
 	time.sleep(1)
