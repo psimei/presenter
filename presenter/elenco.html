@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="guides_data.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	content = "";
+	content += "<ol>";
+	for (guida in guide) {
+		content += "<li>";
+		content += guide[guida].titolo;
+		console.log(guide[guida].titolo);
+		content += "</li>";
+		content += "<ol>";
+		for (slide in guide[guida].slides) {
+			content += "<li>";
+			content += guide[guida].slides[slide].titolo;
+			console.log(guide[guida].slides[slide].titolo);
+			content += "</li>";
+		}
+		content += "</ol>";
+	}
+	content += "</ol>";
+	$("#guide").html(content);
+});
+</script>
+
+</head>
+<body>
+<h2>Elenco delle guide</h2>
+
+<p>
+<span id="guide"></span>
+</p> 
+
+
+</body>
+</html>
